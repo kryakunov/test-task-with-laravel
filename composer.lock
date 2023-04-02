@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "512b0470aabae1f012a48aedc283dcc3",
+    "content-hash": "37d6dbd5af34338ef354e0596b9a9693",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "5.5.4",
+            "version": "5.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "c60e9e02675b1813b6579416a01f1e0a2baf7e0e"
+                "reference": "6f3864b82ad40f272cdc11f240eb5accb2997a49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/c60e9e02675b1813b6579416a01f1e0a2baf7e0e",
-                "reference": "c60e9e02675b1813b6579416a01f1e0a2baf7e0e",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/6f3864b82ad40f272cdc11f240eb5accb2997a49",
+                "reference": "6f3864b82ad40f272cdc11f240eb5accb2997a49",
                 "shasum": ""
             },
             "require": {
@@ -152,9 +152,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Backpack/CRUD/issues",
-                "source": "https://github.com/Laravel-Backpack/CRUD/tree/5.5.4"
+                "source": "https://github.com/Laravel-Backpack/CRUD/tree/5.5.5"
             },
-            "time": "2023-03-27T10:21:37+00:00"
+            "time": "2023-03-30T17:31:23+00:00"
         },
         {
             "name": "brick/math",
@@ -6098,6 +6098,77 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "backpack/generators",
+            "version": "3.3.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Laravel-Backpack/Generators.git",
+                "reference": "5f2675c69a6347ece5302d7bf670ff110ce8344a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Laravel-Backpack/Generators/zipball/5f2675c69a6347ece5302d7bf670ff110ce8344a",
+                "reference": "5f2675c69a6347ece5302d7bf670ff110ce8344a",
+                "shasum": ""
+            },
+            "require": {
+                "backpack/crud": "^5.3.11",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0||^7.0",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Backpack\\Generators\\GeneratorsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Backpack\\Generators\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "tabacitu@backpackforlaravel.com",
+                    "homepage": "https://backpackforlaravel.com",
+                    "role": "Lead Developer & Maintainer"
+                },
+                {
+                    "name": "Cristian Tone",
+                    "email": "cristitone@outlook.com",
+                    "homepage": "http://updivision.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate files for laravel projects",
+            "homepage": "https://github.com/laravel-backpack/generators",
+            "keywords": [
+                "config",
+                "generators",
+                "model",
+                "request",
+                "view"
+            ],
+            "support": {
+                "issues": "https://github.com/Laravel-Backpack/Generators/issues",
+                "source": "https://github.com/Laravel-Backpack/Generators/tree/3.3.16"
+            },
+            "time": "2023-03-03T09:44:35+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "2.0.0",

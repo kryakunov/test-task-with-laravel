@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Model\Mixes;
+use App\Models\Mixes;
+use App\Models\Post;
 use Illuminate\Database\Seeder;
 
 class MixesSeed extends Seeder
@@ -12,23 +13,17 @@ class MixesSeed extends Seeder
      *
      * @return void
      */
+
+
     public function run()
     {
-
-        $mixes = new Mixes;
-
-        $str = '';
-        for($c = 0; $c < 100; $c++)
+        for($i = 0; $i < 99; $i++)
         {
-            for($i = 0; $i < 10; $i++)
-            {
-                $n = $i + $c;
-                if ($n < 101) $str .= $n . ',';
-            }
-            $str =  trim($str, ',');
+            $posts = Post::where('id', '>', $i)->take(10)->get()->toJson();
 
-            $mixes->items = $str;
-            $mixes->save();
+            $res = Mixes::create([
+                'items' => $posts,
+            ]);
         }
     }
 

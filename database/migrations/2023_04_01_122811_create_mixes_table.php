@@ -15,7 +15,8 @@ class CreateMixesTable extends Migration
     {
         Schema::create('mixes', function (Blueprint $table) {
             $table->id();
-            $table->text('items');
+            $table->jsonb('items')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+
+
+    for($i = 0; $i < 99; $i++)
+    {
+        $posts = App\Models\Post::where('id', '>', $i)->take(10)->get()->toJson();
+        dd($posts);
+        $res = App\Models\Mixes::create([
+            'items' => $posts,
+        ]);
+    }
+});

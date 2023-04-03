@@ -13,7 +13,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Post::factory(10)->create();
+        \App\Models\Post::factory()->create();
         $this->call(PostsTableSeeder::class);
+
+        \App\Models\Mixes::factory()->create();
+        $this->call(MixesSeed::class);
+
+        \App\Models\User::create([
+            'name' => 'root',
+            'email' => 'root@root.ru',
+            'password' => 'root',
+        ]);
     }
 }

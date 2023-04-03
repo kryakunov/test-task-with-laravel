@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Post;
+use App\Models\Mixes;
 use App\Http\Resources\PostResource;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return PostResource::collection(Post::all());
+        return Mixes::all();
     }
 
     /**
@@ -27,6 +28,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+        ]);
+
         $created_post = Post::create($request->all());
 
         return new PostResource($created_post);
@@ -40,7 +45,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return new PostResource(Post::findOrFail($id));
+        return Mixes::findOrFail($id);
     }
 
     /**

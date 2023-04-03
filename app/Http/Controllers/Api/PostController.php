@@ -17,7 +17,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Mixes::all();
+        return Mixes::inRandomOrder()->get();
     }
 
     /**
@@ -31,7 +31,7 @@ class PostController extends Controller
         $this->validate($request, [
             'title' => 'required',
         ]);
-
+ 
         $created_post = Post::create($request->all());
 
         return new PostResource($created_post);
@@ -57,7 +57,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**
